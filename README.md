@@ -1,24 +1,25 @@
-# api-quick-start
+# Cookie Stand API
 
-Template Project for starting up CRUD API with Django Rest Framework
+Author: Emad Almajdalawi
 
-## Customization Steps
+Date: 1/6/2022
 
-- DO NOT migrate yet
-- add additional dependencies as needed
-  - Re-export requirements.txt as needed
-- change `things` folder to the app name of your choice
-- Search through entire code base for `Thing`,`Things` and `things` to modify code to use your resource
-  - `project/settings.py`
-  - `project/urls.py`
-  - App's files
-    - `views.py`
-    - `urls.py`
-    - `admin.py`
-    - `serializers.py`
-    - `permissions.py`
-- Update ThingModel with fields you need
-  - Make sure to update other modules that would be affected by Model customizations. E.g. serializers, tests, etc.
-- Rename `project/.env.sample` to `.env` and update as needed
-- Run makemigrations and migrate commands
-- Optional: Update `api_tester.py`
+Application Vesrsion: 0.1.0
+
+Overview:
+
+Snacks API is a RESTful API created by Django framework and it is used to create, update, delete and retrieve Memes. It is connected to Postgresql database and the permissions are implemented.
+
+To use this API:
+
+- Clone the repository
+- Instal the dependencies (you can find them in requirements.txt or pyproject.toml)
+- build the Docker container by running the command `sudo docker-compose build`
+- Run the Docker container by running the command `sudo docker-compose up`
+Enter one of the following URLs:
+    - To view (GET) or create (POST) new object: http://127.0.0.1:8000/api/v1/cookie-stand/
+    - To edit (PUT) or delete (DELETE) an existing object: 'http://127.0.0.1:8000/api/v1/cookie-stand/< id >
+
+<br>
+
+[GitHub Pull Requests](https://github.com/emad-almajdalawi/cookie-stand-api/pull/1)

@@ -15,4 +15,4 @@ class CookieStand(models.Model):
     description = models.TextField(default="", null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.location

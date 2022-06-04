@@ -1,3 +1,4 @@
+from rest_framework import permissions
 from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateDestroyAPIView,
@@ -11,6 +12,7 @@ from .forms import CreateAPIForm
 class CookieStandList(ListCreateAPIView):
     queryset = CookieStand.objects.all()
     serializer_class = CookieStandSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     # custom form that dont have owner field
     form_class= CreateAPIForm

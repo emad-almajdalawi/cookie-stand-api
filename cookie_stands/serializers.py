@@ -15,5 +15,4 @@ class CookieStandSerializer(serializers.ModelSerializer):
         #     'minimum_customers_per_hour',
         #     'maximum_customers_per_hour',
         #     'average_cookies_per_sale',
-        #     'description',
         # ]

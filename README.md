@@ -12,33 +12,36 @@ Snacks API is a RESTful API created by Django framework and it is used to create
 
 To use this API enter one of the following URLs:
 
-- To view (GET) or create (POST) new object: https://cookies-stand-401.herokuapp.com/api/v1/cookie-stand/
+- To view (GET) or create (POST) new object: <https://cookies-stand-401.herokuapp.com/api/v1/cookie-stand/>
 
-- To edit (PUT) or delete (DELETE) an existing object: https://cookies-stand-401.herokuapp.com/api/v1/cookie-stand/< id >
+- To edit (PUT) or delete (DELETE) an existing object: <https://cookies-stand-401.herokuapp.com/api/v1/cookie-stand/>< id >
 
 <br>
 
 Feel free to install it and modifie it yourself, it is an open source project. To do that:
+
 - Clone the repository
 - Instal the dependencies (you can find them in requirements.txt or pyproject.toml)
 - Create a `.env` file insid the base dirictory and add the following variables to it (your credentials):
-    - SECRET_KEY =
-    - DEBUG ='True'
-    - ALLOWED_HOSTS='localhost,127.0.0.1,0.0.0.0'
-    - ALLOW_ALL_ORIGINS='True'
-    - DATABASE_ENGINE=
-    - DATABASE_NAME=
-    - DATABASE_USER=
-    - DATABASE_PASSWORD=
-    - DATABASE_HOST=
-    - DATABASE_PORT='5432'
-    - CSRF_TRUSTED_ORIGINS='[http://127.0.0.1]'
+  - SECRET_KEY =
+  - DEBUG ='True'
+  - ALLOWED_HOSTS='localhost,127.0.0.1,0.0.0.0'
+  - ALLOW_ALL_ORIGINS='True'
+  - DATABASE_ENGINE=
+  - DATABASE_NAME=
+  - DATABASE_USER=
+  - DATABASE_PASSWORD=
+  - DATABASE_HOST=
+  - DATABASE_PORT='5432'
+  - CSRF_TRUSTED_ORIGINS='[http://127.0.0.1]'
+  - ALLOW_METHODS='["DELETE", "GET", "POST", "OPTIONS", "PATCH", "PUT"]'
+  - ALLOW_HEADERS='["accept", "accept-encoding", "authorization", "content-type", "dnt", "origin", "user-agent", "x-csrftoken", "x-requested-with"]'
 
 - Build the Docker container by running the command `sudo docker-compose build`
 - Run the Docker container by running the command `sudo docker-compose up`
 - Enter one of the following URLs:
-    - To view (GET) or create (POST) new object: http://127.0.0.1:8000/api/v1/cookie-stand/
-    - To edit (PUT) or delete (DELETE) an existing object: 'http://127.0.0.1:8000/api/v1/cookie-stand/< id >
+  - To view (GET) or create (POST) new object: <http://127.0.0.1:8000/api/v1/cookie-stand/>
+  - To edit (PUT) or delete (DELETE) an existing object: <http://127.0.0.1:8000/api/v1/cookie-stand/>< id >
 
 <br>
 

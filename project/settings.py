@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 import environ
 
@@ -29,6 +30,8 @@ env = environ.Env(
     DATABASE_HOST=(str, ""),
     DATABASE_PORT=(int, 5432),
     CSRF_TRUSTED_ORIGINS=(list, []),
+    ALLOW_METHODS=(list, []),
+    ALLOW_HEADERS = (list, []),
 )
 
 environ.Env.read_env()
@@ -154,6 +157,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+}
+
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 REST_FRAMEWORK = {
@@ -169,5 +176,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
 CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
+CORS_ALLOW_METHODS = env.list("ALLOW_METHODS")
+CORS_ALLOW_HEADERS = env.list("ALLOW_HEADERS")
 
 CSRF_TRUSTED_ORIGINS = tuple(env.list("CSRF_TRUSTED_ORIGINS"))
